@@ -29,6 +29,10 @@ open class TTSegmentedControl: UIView {
     @IBInspectable open var padding: CGSize = CGSize(width: 30, height: 10)
     @IBInspectable open var cornerRadius: CGFloat = -1 // for rounded corner radius use negative value, 0 to disable
     
+    open var isSwitch: Bool {
+        return attributedDefaultTitles.count == 2
+    }
+    
     public enum DraggingState: Int {
         case none
         case dragging
@@ -148,10 +152,6 @@ open class TTSegmentedControl: UIView {
     
     fileprivate var minContainerWidth: Int {
         return 100
-    }
-    
-    fileprivate var isSwitch: Bool {
-        return attributedDefaultTitles.count == 2
     }
     
     //MARK: - Helpers
