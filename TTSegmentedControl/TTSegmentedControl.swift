@@ -29,9 +29,7 @@ open class TTSegmentedControl: UIView {
     @IBInspectable open var padding: CGSize = CGSize(width: 30, height: 10)
     @IBInspectable open var cornerRadius: CGFloat = -1 // for rounded corner radius use negative value, 0 to disable
     
-    open var isSwitch: Bool {
-        return attributedDefaultTitles.count == 2
-    }
+    open var isSwitch: Bool = false
     
     public enum DraggingState: Int {
         case none
